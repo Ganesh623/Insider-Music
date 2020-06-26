@@ -142,7 +142,7 @@ extension MusicListScene: UISearchResultsUpdating, UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         self.MusicListVM.clearData()
-        self.tableView.reloadData()
+        DispatchQueue.main.async { self.tableView.reloadData() }
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -165,11 +165,8 @@ extension MusicListScene {
     
     /// Calls API
     func callAPI(with searchBarText: String?) {
-        DispatchQueue.main.async { self.refreshControl?.beginRefreshing() }
         ///
         self.MusicListVM.getMusicListFromServer(searchText: searchBarText, success: { [weak self] (isSuccess) in
-            ///
-            DispatchQueue.main.async { self?.refreshControl?.endRefreshing() }
             ///
             if (isSuccess) {
                 DispatchQueue.main.async { self?.tableView.reloadData() }
