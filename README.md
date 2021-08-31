@@ -2,6 +2,8 @@
 
 ### Simple application which fetches the List of Songs from iTunes API with search Keywords and showing in the TableList.
 
+### Note: Don't run the build in simulator. Run it in the iPhone.
+
 ## Table of contents
 * [General info](#general-info)
 * [Technologies](#technologies)
