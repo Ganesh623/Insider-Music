@@ -2,7 +2,8 @@
 
 ### Simple application which fetches the List of Songs from iTunes API with search Keywords and showing in the TableList.
 
-### Note: Don't run the build in simulator. Run it in the iPhone.
+## Note: Don't run the build in simulator. Run it in the iPhone.
+If you want to run in the simulator, please do changes in this class [MusicListScene](https://github.com/Ganesh623/Insider-Music/blob/master/InsiderMusic/FirstScene/VIew/MusicListScene.swift). Check for "// FIX".
 
 ## Table of contents
 * [General info](#general-info)
