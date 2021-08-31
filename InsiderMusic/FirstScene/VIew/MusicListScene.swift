@@ -137,7 +137,9 @@ extension MusicListScene: UISearchResultsUpdating, UISearchBarDelegate {
      Update Search Results, When text changes.
      */
     func updateSearchResults(for searchController: UISearchController) {
-        DispatchQueue.main.async { self.callAPI(with: searchController.searchBar.text) }
+        // FIX: Remove DispatchQueue, if you want to run in the simulator
+        DispatchQueue.main.async { self.callAPI(with: searchController.searchBar.text) }    // Comment, to run in simulator
+//         self.callAPI(with: searchController.searchBar.text)      // Uncomment, to run in simulator
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
